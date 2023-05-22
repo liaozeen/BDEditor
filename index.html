@@ -1,114 +1,114 @@
 <!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><script>//@ts-ignore
-    window.hgVersion = 1679066812482</script><script src=./js/console.js></script><title>BD编辑器</title><style>body {
-      /* background-color: #dedede; */
-      font-size: 12px;
-    }
+  window.hgVersion = 1684767457588</script><script src=./js/console.js></script><title>BD编辑器</title><style>body {
+    /* background-color: #dedede; */
+    font-size: 12px;
+  }
 
-    #qdHtml_loadingDiv {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 999999999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #c7bfbf;
-    }
+  #qdHtml_loadingDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c7bfbf;
+  }
 
-    #qdHtml_loadingDiv .cube {
-      height: 9em;
-      left: 50%;
-      margin: -7.5em;
-      /* padding: 3em; */
-      position: absolute;
-      top: 50%;
-      width: 9em;
-      transform: rotateX(45deg) rotateZ(45deg);
-      transform-style: preserve-3d;
-      z-index: 999999999;
-      background-color: #c7bfbf;
-    }
+  #qdHtml_loadingDiv .cube {
+    height: 9em;
+    left: 50%;
+    margin: -7.5em;
+    /* padding: 3em; */
+    position: absolute;
+    top: 50%;
+    width: 9em;
+    transform: rotateX(45deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+    z-index: 999999999;
+    background-color: #c7bfbf;
+  }
 
-    .loading_cube,
-    .loading_cube:after,
-    .loading_cube:before {
-      content: '';
-      float: left;
-      height: 3em;
-      position: absolute;
-      width: 3em;
-    }
+  .loading_cube,
+  .loading_cube:after,
+  .loading_cube:before {
+    content: '';
+    float: left;
+    height: 3em;
+    position: absolute;
+    width: 3em;
+  }
 
-    .loading_cube {
-      background-color: #05afd1;
-      position: relative;
-      transform: translateZ(3em);
-      transform-style: preserve-3d;
-      transition: .25s;
-      box-shadow: 13em 13em 1.5em rgba(0, 0, 0, 0.1);
-      animation: anim 1s infinite;
-    }
+  .loading_cube {
+    background-color: #05afd1;
+    position: relative;
+    transform: translateZ(3em);
+    transform-style: preserve-3d;
+    transition: .25s;
+    box-shadow: 13em 13em 1.5em rgba(0, 0, 0, 0.1);
+    animation: anim 1s infinite;
+  }
 
-    .loading_cube:after {
-      background-color: #049dbc;
-      transform: rotateX(-90deg) translateY(3em);
-      transform-origin: 100% 100%;
-    }
+  .loading_cube:after {
+    background-color: #049dbc;
+    transform: rotateX(-90deg) translateY(3em);
+    transform-origin: 100% 100%;
+  }
 
-    .loading_cube:before {
-      background-color: #048ca7;
-      transform: rotateY(90deg) translateX(3em);
-      transform-origin: 100% 0;
-    }
+  .loading_cube:before {
+    background-color: #048ca7;
+    transform: rotateY(90deg) translateX(3em);
+    transform-origin: 100% 0;
+  }
 
-    .loading_cube:nth-child(1) {
-      animation-delay: 0.05s;
-    }
+  .loading_cube:nth-child(1) {
+    animation-delay: 0.05s;
+  }
 
-    .loading_cube:nth-child(2) {
-      animation-delay: 0.1s;
-    }
+  .loading_cube:nth-child(2) {
+    animation-delay: 0.1s;
+  }
 
-    .loading_cube:nth-child(3) {
-      animation-delay: 0.15s;
-    }
+  .loading_cube:nth-child(3) {
+    animation-delay: 0.15s;
+  }
 
-    .loading_cube:nth-child(4) {
-      animation-delay: 0.2s;
-    }
+  .loading_cube:nth-child(4) {
+    animation-delay: 0.2s;
+  }
 
-    .loading_cube:nth-child(5) {
-      animation-delay: 0.25s;
-    }
+  .loading_cube:nth-child(5) {
+    animation-delay: 0.25s;
+  }
 
-    .loading_cube:nth-child(6) {
-      animation-delay: 0.3s;
-    }
+  .loading_cube:nth-child(6) {
+    animation-delay: 0.3s;
+  }
 
-    .loading_cube:nth-child(7) {
-      animation-delay: 0.35s;
-    }
+  .loading_cube:nth-child(7) {
+    animation-delay: 0.35s;
+  }
 
-    .loading_cube:nth-child(8) {
-      animation-delay: 0.4s;
-    }
+  .loading_cube:nth-child(8) {
+    animation-delay: 0.4s;
+  }
 
-    .loading_cube:nth-child(9) {
-      animation-delay: 0.45s;
-    }
+  .loading_cube:nth-child(9) {
+    animation-delay: 0.45s;
+  }
 
-    @keyframes anim {
-      50% {
-        transform: translateZ(0.5em);
+  @keyframes anim {
+    50% {
+      transform: translateZ(0.5em);
+    }
+  }</style><script>//监听加载状态改变
+    document.onreadystatechange = function () {
+      if (document.readyState == 'complete') {
+        var loadingMask = document.getElementById('qdHtml_loadingDiv');
+        loadingMask.parentNode.removeChild(loadingMask);
       }
-    }</style><script>//监听加载状态改变
-      document.onreadystatechange = function () {
-        if (document.readyState == 'complete') {
-          var loadingMask = document.getElementById('qdHtml_loadingDiv');
-          loadingMask.parentNode.removeChild(loadingMask);
-        }
-      };</script><link href=css/app.css rel=preload as=style><link href=css/chunk-vendors.css rel=preload as=style><link href=js/app.js rel=preload as=script><link href=js/chunk-vendors.js rel=preload as=script><link href=css/chunk-vendors.css rel=stylesheet><link href=css/app.css rel=stylesheet></head><body><div id=qdHtml_loadingDiv><div class=cube><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div></div></div><div id=app></div><script>// 设置一些常用的默认值
-    window["JDBModelCommonType"] = "变量异形"
-    window["currentBDEnv"] = "bd编辑器"</script><script src=./js/lib/QuickDrawOutApi.js></script><script src=./js/lib/MainView.js></script><script src=./js/lib/FileSaver.min.js></script><script src=./js/lib/dxf-parser.js></script><script src=./js/lib/maker.js></script><script src=./js/lib/jszip.js></script><script src=./js/lib/math.js></script><script src=./js/lib/dxf.js></script><script src=./js/lib/batchBd.js></script><script src=./js/lib/parseFormulaXml.js></script><script src=./js/lib/Util.js></script><script src=./js/lib/JCanvas.js></script><script src=./js/lib/JBitmapSys.js></script><script src=./js/lib/jhgBD.js></script><script src=./js/lib/bdlocker.js></script><script src=./js/lib/hgjdebug.js></script><script src=./js/lib/hgjutil.js></script><script>JBDDebug()</script><script src=js/chunk-vendors.js></script><script src=js/app.js></script></body></html>
+    };</script><link href=css/app.css rel=preload as=style><link href=css/chunk-vendors.css rel=preload as=style><link href=js/app.js rel=preload as=script><link href=js/chunk-vendors.js rel=preload as=script><link href=css/chunk-vendors.css rel=stylesheet><link href=css/app.css rel=stylesheet></head><body><div id=qdHtml_loadingDiv><div class=cube><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div><div class=loading_cube></div></div></div><div id=app></div><script>// 设置一些常用的默认值
+  window["JDBModelCommonType"] = "变量异形"
+  window["currentBDEnv"] = "bd编辑器"</script><script src=./js/lib/QuickDrawOutApi.js></script><script src=./js/lib/MainView.js></script><script src=./js/lib/FileSaver.min.js></script><script src=./js/lib/dxf-parser.js></script><script src=./js/lib/maker.js></script><script src=./js/lib/jszip.js></script><script src=./js/lib/math.js></script><script src=./js/lib/dxf.js></script><script src=./js/lib/batchBd.js></script><script src=./js/lib/parseFormulaXml.js></script><script src=./js/lib/Util.js></script><script src=./js/lib/JCanvas.js></script><script src=./js/lib/JBitmapSys.js></script><script src=./js/lib/jhgBD.js></script><script src=./js/lib/bdlocker.js></script><script src=./js/lib/hgjdebug.js></script><script src=./js/lib/hgjutil.js></script><script>JBDDebug()</script><script src=js/chunk-vendors.js></script><script src=js/app.js></script></body></html>
