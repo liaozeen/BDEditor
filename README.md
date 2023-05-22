@@ -1,47 +1,51 @@
-# 项目简介
-一个的2D图形编辑器，用于对衣柜的板进行查看和修改。
+<h1 align="center">2D Web Design Tool</h1>
 
-功能点：
-- 拖拽
-- 定点缩放（基于当前鼠标的位置进行放大缩小）
-- 撤销/恢复
-- 吸附
-- 标注
-- 读取Dxf格式的文件（AutoCAD的绘图交换文件格式）
-- 图形间的转换
+<div align="center">
 
-[在线预览](https://liaozeen.github.io/BDEditor/)
+[Demo](https://liaozeen.github.io/BDEditor/)</div>
 
-# 使用指南
-## 页面结构
-- 顶部：功能栏
-- 正中间：画布，核心部分
-- 左侧：画布上的图形列表，查看和编辑图形的属性
-- 右上角：板的6个面展示
-- 底部：板的基本信息
+![](./img/%E9%A2%84%E8%A7%88%E5%9B%BE.png)
 
-## 顶部功能区介绍
-- 导入：打开本地的.bd文件（自定义的文件格式）
-- 源代码：查看.bd文件的内容，即当前画布上显示的板件的XML内容
-- 撤销：撤销之前的操作，恢复到之前的状态
-- 恢复：重新执行之前的操作
-- 导出bd：将当前画布上的图形导出下载
-- 导出png：将当前画布上的图形导出为png文件
-- 重置为矩形：将当前的多边形重置为矩形
-- 导入Dxf：读取dxf文件，显示其图形
+# Features
+- Drag and drop
+- Zoom in/out based on the current mouse position
+- Undo/Redo
+- Snap to grid/snap to object
+- Annotation
+- Read Dxf files (AutoCAD's drawing exchange file format)
+- Conversion between different graphic formats
 
-## 左侧图形列表操作
-- 对点弧的操作
-    - 单击：可查看当前选中的图形在画布上的位置
-    - 双击：可查看和编辑点和弧的属性
-- 对AB面的图形的操作
-    - 单击：可查看当前选中的图形在画布上的位置
-    - 右击：调出操作列表
+# Instruction
+## Page Structure
+- Top: Function bar
+- Center: Canvas, core part
+- Left: List of graphics on the canvas, view and edit graphic properties
+- Upper right corner: Display of 6 sides of the board 
+- Bottom: Basic information about the board
 
-## 画布区域的操作
-在画布区域的右上角是显示板件的不同面：
-- A/B面：为板件的最大的正反两面，在该面可对其进行编辑，比如修改板件的轮廓、添加凹槽（添加图元和孔无法使用）、直线转圆弧。
-- L/R/U/D面：为板件的四个侧面，只预览，从侧面查看板件的结构
-- 预览：查看带有标注的板件图形
+## Introduction to Top Function Area 
+- Import: Open local .bd file (custom file format)
+- Source Code: View content of .bd file, i.e. XML content displayed on current canvas 
+- Undo：Undo previous operation and restore to previous state 
+- Redo：Re-execute previous operation 
+- Export bd：Export graphics on current canvas for download  
+- Export png：Export graphics on current canvas as a png file  
+- Reset to rectangle：Reset current polygon to rectangle  
+- Import Dxf：Read dxf files and display their graphics 
 
-在画布上可选中图形进行拖拽，调整其位置。还能放大缩小，方便对稍大的图形的局部进行操作。
+## Operations in Graphic List on Left Side   
+- Operations for point arcs:
+    - Single click : View position of currently selected graphic on the canvas    
+    - Double-click : View and edit properties of points and arcs  
+
+- Operations for AB-side Graphics:
+    - Single click : View position of currently selected graphic on the canvas    
+    - Right-click : Call up operation list  
+
+## Operations in Canvas Area   
+In upper right corner are different faces displaying boards:
+   - A/B side ：The largest positive/negative two sides of board can be edited here, such as modifying outline or adding grooves (adding elements and holes cannot be used), converting straight lines into arcs.
+   - L/R/U/D side ：Four side views previewing structure of board from different angles.  
+   - Preview ：View annotated board shape   
+
+On the canvas, you can select graphics for dragging to adjust their positions. You can also zoom in/out conveniently for partial operations with slightly larger graphics.
